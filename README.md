@@ -11,7 +11,7 @@
 - [Débora Duarte](https://github.com/duartedebis)
 - [Henrique Sardella](https://github.com/henrique-sdc)
 - [Thiago Alonso](https://github.com/ThiagoAlonso05)
-- [Rafa Ambrosio](https://github.com/rafaambrosio)
+- [Rafael Ambrosio](https://github.com/rafaoambrosio)
 
 # Valorant Player Data Scraper
 
@@ -49,7 +49,6 @@ pip install fake_useragent
 ## Estrutura do Projeto
 
 - `main.py`: Arquivo principal que inicia o processo de raspagem de dados.
-- `utils.py`: Contém funções utilitárias para processamento e inserção de dados.
 
 ## Licença
 
