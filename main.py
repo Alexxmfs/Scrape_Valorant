@@ -4,6 +4,10 @@ from fake_useragent import UserAgent
 from lxml import html
 import pandas as pd
 import threading
+#from fp.fp import FreeProxy
+#import ssl
+
+
 
 def pegausertag(rowo):
     try:
@@ -16,8 +20,9 @@ def pegausertag(rowo):
 def pegaperfil(page_num):
     ua = UserAgent()
     usernames_with_tags = []
-
-    response = requests.get(f'https://tracker.gg/valorant/leaderboards/ranked/all/default?page={page_num}&region=global&act=22d10d66-4d2a-a340-6c54-408c7bd53807', headers={'User-Agent': ua.random})
+    proxy = None
+    #proxy = FreeProxy(rand=True, timeout=1, https=True).get()
+    response = requests.get(f'https://tracker.gg/valorant/leaderboards/ranked/all/default?page={page_num}&region=global&act=22d10d66-4d2a-a340-6c54-408c7bd53807', headers={'User-Agent': ua.random}, proxies=proxy)
     tree = html.fromstring(response.content)
 
     rows = tree.xpath('//*[@id="app"]/div[2]/div[3]/div/main/div[3]/div[2]/div/div/div[1]/div[2]/table/tbody/tr')
@@ -331,20 +336,27 @@ def raspar_nome(user_with_tag):
 
         inserir_dados(pd.DataFrame([user_data]))
     except Exception as e:
-        print("Erro ao raspar os dados:", e, str(data))
+        print("Erro ao raspar os dados:", e)
 
 threads = []
 dthreads = []
 def main(start_page, end_page):
     global threads
     for page_num in range(start_page, end_page + 1):  
-        usernames_with_tags = pegaperfil(page_num)
+        print('pegaperfil start')
+        for attempt in range(10):
+            print(f"Tentativa {attempt + 1}")
+            usernames_with_tags = pegaperfil(page_num)
+            if len(usernames_with_tags) > 0:
+                print('Sucesso')
+                break
+            else:
+                print('Falha')
+        print('pegaperfil end')
         for i in range(0, len(usernames_with_tags), 100):
             batch_usernames = usernames_with_tags[i:i+100]
-            print(batch_usernames)
             viewsthread = threading.Thread(target=pegaviews, args=(batch_usernames, page_num))
             threads = []
-            dthreads = []
             threads.append(viewsthread)
             for user in batch_usernames:
                 print(user)
@@ -359,6 +371,6 @@ def main(start_page, end_page):
 
 
 if __name__ == "__main__":
-    start_page = 144
+    start_page = 1
     end_page = 434
     main(start_page, end_page)
