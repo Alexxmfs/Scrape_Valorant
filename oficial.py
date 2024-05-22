@@ -234,6 +234,10 @@ def scrapePlayer(user, tag):
     lossgs = lossstat.find_all('g')[1]
     playerLosses = lossgs.find_all('text')[1].text
     
+    views = soup.find('span', {'class':'ph-details__subtitle-wrapper'})
+    view = views.find_all('span')[0]
+    view = views.find_all('span')[0].text
+
     playerData = {
         'Username': user,
         'Tag': tag,
@@ -285,9 +289,10 @@ def scrapePlayer(user, tag):
         'TopWeapon2': playerTopWeapons.get('topWeapon2', {}).get('name', ''),
         'TopWeaponHeadshot2': playerTopWeapons.get('topWeapon2', {}).get('head%', ''),
         'TopWeapon3': playerTopWeapons.get('topWeapon3', {}).get('name', ''),
-        'TopWeaponHeadshot3': playerTopWeapons.get('topWeapon3', {}).get('head%', '')
+        'TopWeaponHeadshot3': playerTopWeapons.get('topWeapon3', {}).get('head%', ''),
+        'Views': view,
     }
-    print("Username: " + user + " #" + tag + "\n" + "Damage Round: " + playerDpR + "\n" + "K/D Ratio: " + playerKDR + "\n" + "Headshot: " + playerHeadRate + "\n" + "Win: " + playerWinRate + "\n" + "Wins: " + playerWins + "\n" + "KAST: " + playerKAST + "\n" + "DDA/Round: " + playerDDdeltaR + "\n" + "Kills: " + playerKills + "\n" + "Deaths: " +  playerDeaths + "\n" + "Assits: " + playerAssists + "\n" + "ACS: " + playerACS + "\n" + "KADRatio: " + playerKADRatio + "\n" + "Kills/Round: " + playerKillsPerRound + "\n" + "Clutches 1v1: " + playerClutch1v1 + "\n" + "Flawless: " + playerFlawless + "\n" + "Current Rating: " + playerCurrentRating + "\n" + "Peak Rating: " + playerPeakRating + "\n" + "Top Weapons: " + str(playerTopWeapons) + "\n" + "Top Maps: " + str(playerTopMaps) + "\n" + "Top Agents: " + str(playerTopAgents) + "\n" + "Playtime: " + playerPlaytime + "\n" + "Matches: " + playerMatches + "\n" + "Level: " + playerLevel + "\n" + "Losses: " + playerLosses + "\n" + "URL: " + url)
+    print("Username: " + user + " #" + tag + "\n" + "Damage Round: " + playerDpR + "\n" + "K/D Ratio: " + playerKDR + "\n" + "Headshot: " + playerHeadRate + "\n" + "Win: " + playerWinRate + "\n" + "Wins: " + playerWins + "\n" + "KAST: " + playerKAST + "\n" + "DDA/Round: " + playerDDdeltaR + "\n" + "Kills: " + playerKills + "\n" + "Deaths: " +  playerDeaths + "\n" + "Assits: " + playerAssists + "\n" + "ACS: " + playerACS + "\n" + "KADRatio: " + playerKADRatio + "\n" + "Kills/Round: " + playerKillsPerRound + "\n" + "Clutches 1v1: " + playerClutch1v1 + "\n" + "Flawless: " + playerFlawless + "\n" + "Current Rating: " + playerCurrentRating + "\n" + "Peak Rating: " + playerPeakRating + "\n" + "Top Weapons: " + str(playerTopWeapons) + "\n" + "Top Maps: " + str(playerTopMaps) + "\n" + "Top Agents: " + str(playerTopAgents) + "\n" + "Playtime: " + playerPlaytime + "\n" + "Matches: " + playerMatches + "\n" + "Level: " + playerLevel + "\n" + "Losses: " + playerLosses + "\n" + "URL: " + url + "\n" + "Views: " + view)
     
     inserir_dados(playerData)
     
