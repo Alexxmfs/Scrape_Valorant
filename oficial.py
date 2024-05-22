@@ -69,7 +69,30 @@ def inserir_dados(data):
             'topWeapon2': data['TopWeapon2'],
             'topWeaponHeadshot2': data['TopWeaponHeadshot2'],
             'topWeapon3': data['TopWeapon3'],
-            'topWeaponHeadshot3': data['TopWeaponHeadshot3']
+            'topWeaponHeadshot3': data['TopWeaponHeadshot3'],
+
+            'topMap1': data['TopMap1'],
+            'topMapWinrate1': data['TopMapWinrate1'],
+            'topMapWins1': data['TopMapWins1'],
+            'topMapLosses1': data['TopMapLosses1'],
+            'topMap2': data['TopMap2'],
+            'topMapWinrate2': data['TopMapWinrate2'],
+            'topMapWins2': data['TopMapWins2'],
+            'topMapLosses2': data['TopMapLosses2'],
+            'topMap3': data['TopMap3'],
+            'topMapWinrate3': data['TopMapWinrate3'],
+            'topMapWins3': data['TopMapWins3'],
+            'topMapLosses3': data['TopMapLosses3'],
+
+            'topMap4': data['TopMap4'],
+            'topMapWinrate4': data['TopMapWinrate4'],
+            'topMapWins4': data['TopMapWins4'],
+            'topMapLosses4': data['TopMapLosses4'],
+
+            'topMap5': data['TopMap5'],
+            'topMapWinrate5': data['TopMapWinrate5'],
+            'topMapWins5': data['TopMapWins5'],
+            'topMapLosses5': data['TopMapLosses5'],
         }
 
         response = requests.post(url, json=jogador_request_data)  # Send the correct data
@@ -209,7 +232,7 @@ def scrapePlayer(user, tag):
         agentdict = {
             'name': agentname,
             'hours': str(agenthrs).replace(' hours', ''),
-            'matches': agentmatches,
+            'matches': agentmatches.replace(',', '.'),
             'winrate': agentwinrate,
             'kd': agentkd,
             'adr': agentadr,
@@ -290,13 +313,58 @@ def scrapePlayer(user, tag):
         'TopWeaponHeadshot2': playerTopWeapons.get('topWeapon2', {}).get('head%', ''),
         'TopWeapon3': playerTopWeapons.get('topWeapon3', {}).get('name', ''),
         'TopWeaponHeadshot3': playerTopWeapons.get('topWeapon3', {}).get('head%', ''),
+
+        'TopMap1': playerTopMaps.get('topMap1', {}).get('name', ''),
+        'TopMapWinrate1': playerTopMaps.get('topMap1', {}).get('winrate', ''),
+        'TopMapWins1': playerTopMaps.get('topMap1', {}).get('wins', ''),
+        'TopMapLosses1': playerTopMaps.get('topMap1', {}).get('loses', ''),
+        'TopMap2': playerTopMaps.get('topMap2', {}).get('name', ''),
+        'TopMapWinrate2': playerTopMaps.get('topMap2', {}).get('winrate', ''),
+        'TopMapWins2': playerTopMaps.get('topMap2', {}).get('wins', ''),
+        'TopMapLosses2': playerTopMaps.get('topMap2', {}).get('loses', ''),
+        'TopMap3': playerTopMaps.get('topMap3', {}).get('name', ''),
+        'TopMapWinrate3': playerTopMaps.get('topMap3', {}).get('winrate', ''),
+        'TopMapWins3': playerTopMaps.get('topMap3', {}).get('wins', ''),
+        'TopMapLosses3': playerTopMaps.get('topMap3', {}).get('loses', ''),
+
+        'TopMap4': playerTopMaps.get('topMap4', {}).get('name', ''),
+        'TopMapWinrate4': playerTopMaps.get('topMap4', {}).get('winrate', ''),
+        'TopMapWins4': playerTopMaps.get('topMap4', {}).get('wins', ''),
+        'TopMapLosses4': playerTopMaps.get('topMap4', {}).get('loses', ''),
+
+        'TopMap5': playerTopMaps.get('topMap5', {}).get('name', ''),
+        'TopMapWinrate5': playerTopMaps.get('topMap5', {}).get('winrate', ''),
+        'TopMapWins5': playerTopMaps.get('topMap5', {}).get('wins', ''),
+        'TopMapLosses5': playerTopMaps.get('topMap5', {}).get('loses', ''),
+
         'Views': view,
+
     }
-    print("Username: " + user + " #" + tag + "\n" + "Damage Round: " + playerDpR + "\n" + "K/D Ratio: " + playerKDR + "\n" + "Headshot: " + playerHeadRate + "\n" + "Win: " + playerWinRate + "\n" + "Wins: " + playerWins + "\n" + "KAST: " + playerKAST + "\n" + "DDA/Round: " + playerDDdeltaR + "\n" + "Kills: " + playerKills + "\n" + "Deaths: " +  playerDeaths + "\n" + "Assits: " + playerAssists + "\n" + "ACS: " + playerACS + "\n" + "KADRatio: " + playerKADRatio + "\n" + "Kills/Round: " + playerKillsPerRound + "\n" + "Clutches 1v1: " + playerClutch1v1 + "\n" + "Flawless: " + playerFlawless + "\n" + "Current Rating: " + playerCurrentRating + "\n" + "Peak Rating: " + playerPeakRating + "\n" + "Top Weapons: " + str(playerTopWeapons) + "\n" + "Top Maps: " + str(playerTopMaps) + "\n" + "Top Agents: " + str(playerTopAgents) + "\n" + "Playtime: " + playerPlaytime + "\n" + "Matches: " + playerMatches + "\n" + "Level: " + playerLevel + "\n" + "Losses: " + playerLosses + "\n" + "URL: " + url + "\n" + "Views: " + view)
-    
+
+    print("Username: " + user + " #" + tag + "\n" + "Damage Round: " + playerDpR + "\n" + "K/D Ratio: " + playerKDR + "\n" + "Headshot: " + playerHeadRate + "\n" + "Win: " + playerWinRate + "\n" + "Wins: " + playerWins + "\n" + "KAST: " + playerKAST + "\n" + "DDA/Round: " + playerDDdeltaR + "\n" + "Kills: " + playerKills + "\n" + "Deaths: " +  playerDeaths + "\n" + "Assits: " + playerAssists + "\n" + "ACS: " + playerACS + "\n" + "KADRatio: " + playerKADRatio + "\n" + "Kills/Round: " + playerKillsPerRound + "\n" + "Clutches 1v1: " + playerClutch1v1 + "\n" + "Flawless: " + playerFlawless + "\n" + "Current Rating: " + playerCurrentRating + "\n" + "Peak Rating: " + playerPeakRating + "\n" + "Top Weapons: " + str(playerTopWeapons) + "\n" + "Top Maps: " + str(playerTopMaps) + "\n" + "Top Agents: " + str(playerTopAgents) + "\n" + "Playtime: " + playerPlaytime + "\n" + "Matches: " + playerMatches + "\n" + "Level: " + playerLevel + "\n" + "Losses: " + playerLosses + "\n" + "URL: " + url + "\n" + "Views: " + view + 
+          "\nTop Map 1: " + playerData['TopMap1'] +
+          "\nTop Map 1 Winrate: " + playerData['TopMapWinrate1'] +
+          "\nTop Map 1 Wins: " + playerData['TopMapWins1'] +
+          "\nTop Map 1 Losses: " + playerData['TopMapLosses1'] +
+          "\nTop Map 2: " + playerData['TopMap2'] +
+          "\nTop Map 2 Winrate: " + playerData['TopMapWinrate2'] +
+          "\nTop Map 2 Wins: " + playerData['TopMapWins2'] +
+          "\nTop Map 2 Losses: " + playerData['TopMapLosses2'] +
+          "\nTop Map 3: " + playerData['TopMap3'] +
+          "\nTop Map 3 Winrate: " + playerData['TopMapWinrate3'] +
+          "\nTop Map 3 Wins: " + playerData['TopMapWins3'] +
+          "\nTop Map 3 Losses: " + playerData['TopMapLosses3'] + 
+          "\nTop Map 4: " + playerData['TopMap4'] +
+          "\nTop Map 4 Winrate: " + playerData['TopMapWinrate4'] +
+          "\nTop Map 4 Wins: " + playerData['TopMapWins4'] +
+          "\nTop Map 4 Losses: " + playerData['TopMapLosses4'] +
+          "\nTop Map 5: " + playerData['TopMap5'] +
+          "\nTop Map 5 Winrate: " + playerData['TopMapWinrate5'] +
+          "\nTop Map 5 Wins: " + playerData['TopMapWins5'] +
+          "\nTop Map 5 Losses: " + playerData['TopMapLosses5'])
+
     inserir_dados(playerData)
     
-    # Imprimindo o conteúdo de playerData para verificar os dados
     for key, value in playerData.items():
         print(f"{key}: {value}")
     driver.quit()
