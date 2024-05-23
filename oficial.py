@@ -98,6 +98,26 @@ def inserir_dados(data):
             'topMapWinrate5': numeroString(data['TopMapWinrate5']),
             'topMapWins5': numeroString(data['TopMapWins5']),
             'topMapLosses5': numeroString(data['TopMapLosses5']),
+            'topMap6': data['TopMap6'],
+            'topMapWinrate6': numeroString(data['TopMapWinrate6']),
+            'topMapWins6': numeroString(data['TopMapWins6']),
+            'topMapLosses6': numeroString(data['TopMapLosses6']),
+            'topMap7': data['TopMap7'],
+            'topMapWinrate7': numeroString(data['TopMapWinrate7']),
+            'topMapWins7': numeroString(data['TopMapWins7']),
+            'topMapLosses7': numeroString(data['TopMapLosses7']),
+            'topMap8': data['TopMap8'],
+            'topMapWinrate8': numeroString(data['TopMapWinrate8']),
+            'topMapWins8': numeroString(data['TopMapWins8']),
+            'topMapLosses8': numeroString(data['TopMapLosses8']),
+            'topMap9': data['TopMap9'],
+            'topMapWinrate9': numeroString(data['TopMapWinrate9']),
+            'topMapWins9': numeroString(data['TopMapWins9']),
+            'topMapLosses9': numeroString(data['TopMapLosses9']),
+            'topMap10': data['TopMap10'],
+            'topMapWinrate10': numeroString(data['TopMapWinrate10']),
+            'topMapWins10': numeroString(data['TopMapWins10']),
+            'topMapLosses10': numeroString(data['TopMapLosses10']),
             'views': numeroString(data['views'])
         }
 
@@ -348,6 +368,26 @@ def scrapePlayer(user, tag):
         'TopMapWinrate5': playerTopMaps["topMap5"]["winrate"],
         'TopMapWins5': playerTopMaps["topMap5"]["wins"],
         'TopMapLosses5': playerTopMaps["topMap5"]["loses"],
+        'TopMap6': playerTopMaps["topMap6"]["name"],
+        'TopMapWinrate6': playerTopMaps["topMap6"]["winrate"],
+        'TopMapWins6': playerTopMaps["topMap6"]["wins"],
+        'TopMapLosses6': playerTopMaps["topMap6"]["loses"],
+        'TopMap7': playerTopMaps["topMap7"]["name"],
+        'TopMapWinrate7': playerTopMaps["topMap7"]["winrate"],
+        'TopMapWins7': playerTopMaps["topMap7"]["wins"],
+        'TopMapLosses7': playerTopMaps["topMap7"]["loses"],
+        'TopMap8': playerTopMaps["topMap8"]["name"],
+        'TopMapWinrate8': playerTopMaps["topMap8"]["winrate"],
+        'TopMapWins8': playerTopMaps["topMap8"]["wins"],
+        'TopMapLosses8': playerTopMaps["topMap8"]["loses"],
+        'TopMap9': playerTopMaps["topMap9"]["name"],
+        'TopMapWinrate9': playerTopMaps["topMap9"]["winrate"],
+        'TopMapWins9': playerTopMaps["topMap9"]["wins"],
+        'TopMapLosses9': playerTopMaps["topMap9"]["loses"],
+        'TopMap10': playerTopMaps["topMap10"]["name"],
+        'TopMapWinrate10': playerTopMaps["topMap10"]["winrate"],
+        'TopMapWins10': playerTopMaps["topMap10"]["wins"],
+        'TopMapLosses10': playerTopMaps["topMap10"]["loses"],
         'views': view
     }
         
@@ -372,7 +412,28 @@ def scrapePlayer(user, tag):
           "\nTop Map 5: " + playerData['TopMap5'] +
           "\nTop Map 5 Winrate: " + playerData['TopMapWinrate5'] +
           "\nTop Map 5 Wins: " + playerData['TopMapWins5'] +
-          "\nTop Map 5 Losses: " + playerData['TopMapLosses5'])
+          "\nTop Map 5 Losses: " + playerData['TopMapLosses5'] +
+          "\nTop Map 6: " + playerData['TopMap6'] +
+          "\nTop Map 6 Winrate: " + playerData['TopMapWinrate6'] +
+          "\nTop Map 6 Wins: " + playerData['TopMapWins6'] +
+          "\nTop Map 6 Losses: " + playerData['TopMapLosses6'] +
+          "\nTop Map 7: " + playerData['TopMap7'] +
+          "\nTop Map 7 Winrate: " + playerData['TopMapWinrate7'] +
+          "\nTop Map 7 Wins: " + playerData['TopMapWins7'] +
+            "\nTop Map 7 Losses: " + playerData['TopMapLosses7'] +
+            "\nTop Map 8: " + playerData['TopMap8'] +
+            "\nTop Map 8 Winrate: " + playerData['TopMapWinrate8'] +
+            "\nTop Map 8 Wins: " + playerData['TopMapWins8'] +
+            "\nTop Map 8 Losses: " + playerData['TopMapLosses8'] +
+            "\nTop Map 9: " + playerData['TopMap9'] +
+            "\nTop Map 9 Winrate: " + playerData['TopMapWinrate9'] +
+            "\nTop Map 9 Wins: " + playerData['TopMapWins9'] +
+            "\nTop Map 9 Losses: " + playerData['TopMapLosses9'] +
+            "\nTop Map 10: " + playerData['TopMap10'] +
+            "\nTop Map 10 Winrate: " + playerData['TopMapWinrate10'] +
+            "\nTop Map 10 Wins: " + playerData['TopMapWins10'] +
+            "\nTop Map 10 Losses: " + playerData['TopMapLosses10']
+          )
 
     inserir_dados(playerData)
     
