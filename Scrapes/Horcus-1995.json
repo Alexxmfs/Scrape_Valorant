@@ -1,0 +1,343 @@
+{
+    "Username": "Horcus",
+    "Tag": "1995",
+    "Url": "https://tracker.gg/valorant/profile/riot/Horcus%231995/overview?season=all",
+    "DpR": "147.9",
+    "KDR": "1.23",
+    "Headshot%": "24.9%",
+    "Win%": "51.5%",
+    "Wins": "4.536",
+    "KAST": "71.6%",
+    "DDdeltaR": "13",
+    "Kills": "161.229",
+    "Deaths": "130.773",
+    "Assists": "25.605",
+    "ACS": "236.3",
+    "KADRatio": "1.43",
+    "KillsPerRound": "0.9",
+    "Clutch1v1s": "2.774",
+    "FlawlessRounds": "7.029",
+    "CurrentRating": "532RR",
+    "PeakRating": "1.160RR",
+    "TopWeaponsDict": {
+        "topWeapon1": {
+            "name": "Vandal",
+            "head%": "40%",
+            "body%": "56%",
+            "leg%": "5%",
+            "kills": "49.679"
+        },
+        "topWeapon2": {
+            "name": "Operator",
+            "head%": "8%",
+            "body%": "91%",
+            "leg%": "1%",
+            "kills": "40.300"
+        },
+        "topWeapon3": {
+            "name": "Classic",
+            "head%": "37%",
+            "body%": "60%",
+            "leg%": "3%",
+            "kills": "7.065"
+        }
+    },
+    "TopWeaponsList": [
+        {
+            "name": "Vandal",
+            "head%": "40%",
+            "body%": "56%",
+            "leg%": "5%",
+            "kills": "49.679"
+        },
+        {
+            "name": "Operator",
+            "head%": "8%",
+            "body%": "91%",
+            "leg%": "1%",
+            "kills": "40.300"
+        },
+        {
+            "name": "Classic",
+            "head%": "37%",
+            "body%": "60%",
+            "leg%": "3%",
+            "kills": "7.065"
+        }
+    ],
+    "TopMapsDict": {
+        "topMap1": {
+            "name": "Breeze",
+            "winrate": "54.1%",
+            "wins": "466",
+            "loses": "392"
+        },
+        "topMap2": {
+            "name": "Split",
+            "winrate": "53.1%",
+            "wins": "640",
+            "loses": "550"
+        },
+        "topMap3": {
+            "name": "Icebox",
+            "winrate": "53.0%",
+            "wins": "541",
+            "loses": "469"
+        },
+        "topMap4": {
+            "name": "Lotus",
+            "winrate": "52.4%",
+            "wins": "274",
+            "loses": "245"
+        },
+        "topMap5": {
+            "name": "Bind",
+            "winrate": "52.2%",
+            "wins": "656",
+            "loses": "588"
+        },
+        "topMap6": {
+            "name": "Sunset",
+            "winrate": "51.5%",
+            "wins": "141",
+            "loses": "132"
+        },
+        "topMap7": {
+            "name": "Fracture",
+            "winrate": "50.6%",
+            "wins": "365",
+            "loses": "350"
+        },
+        "topMap8": {
+            "name": "Ascent",
+            "winrate": "49.4%",
+            "wins": "668",
+            "loses": "666"
+        },
+        "topMap9": {
+            "name": "Haven",
+            "winrate": "49.2%",
+            "wins": "598",
+            "loses": "602"
+        },
+        "topMap10": {
+            "name": "Pearl",
+            "winrate": "48.6%",
+            "wins": "187",
+            "loses": "192"
+        }
+    },
+    "TopMapsList": [
+        {
+            "name": "Breeze",
+            "winrate": "54.1%",
+            "wins": "466",
+            "loses": "392"
+        },
+        {
+            "name": "Split",
+            "winrate": "53.1%",
+            "wins": "640",
+            "loses": "550"
+        },
+        {
+            "name": "Icebox",
+            "winrate": "53.0%",
+            "wins": "541",
+            "loses": "469"
+        },
+        {
+            "name": "Lotus",
+            "winrate": "52.4%",
+            "wins": "274",
+            "loses": "245"
+        },
+        {
+            "name": "Bind",
+            "winrate": "52.2%",
+            "wins": "656",
+            "loses": "588"
+        },
+        {
+            "name": "Sunset",
+            "winrate": "51.5%",
+            "wins": "141",
+            "loses": "132"
+        },
+        {
+            "name": "Fracture",
+            "winrate": "50.6%",
+            "wins": "365",
+            "loses": "350"
+        },
+        {
+            "name": "Ascent",
+            "winrate": "49.4%",
+            "wins": "668",
+            "loses": "666"
+        },
+        {
+            "name": "Haven",
+            "winrate": "49.2%",
+            "wins": "598",
+            "loses": "602"
+        },
+        {
+            "name": "Pearl",
+            "winrate": "48.6%",
+            "wins": "187",
+            "loses": "192"
+        }
+    ],
+    "TopAgentsDict": {
+        "topAgent1": {
+            "name": "Chamber",
+            "hours": "2.210",
+            "matches": "3.873",
+            "winrate": "52.7%",
+            "kd": "1.27",
+            "adr": "148.0",
+            "acs": "233.8",
+            "dddelta": "+16",
+            "topmapname": "Breeze",
+            "topmapwinrate": "57% WR "
+        },
+        "topAgent2": {
+            "name": "Jett",
+            "hours": "1.566",
+            "matches": "2.723",
+            "winrate": "53.7%",
+            "kd": "1.30",
+            "adr": "152.9",
+            "acs": "253.7",
+            "dddelta": "+19",
+            "topmapname": "Icebox",
+            "topmapwinrate": "58% WR "
+        },
+        "topAgent3": {
+            "name": "Reyna",
+            "hours": "553",
+            "matches": "988",
+            "winrate": "48.4%",
+            "kd": "1.19",
+            "adr": "157.4",
+            "acs": "245.8",
+            "dddelta": "+10",
+            "topmapname": "Breeze",
+            "topmapwinrate": "53% WR "
+        }
+    },
+    "TopAgentsList": [
+        {
+            "name": "Chamber",
+            "hours": "2.210",
+            "matches": "3.873",
+            "winrate": "52.7%",
+            "kd": "1.27",
+            "adr": "148.0",
+            "acs": "233.8",
+            "dddelta": "+16",
+            "topmapname": "Breeze",
+            "topmapwinrate": "57% WR "
+        },
+        {
+            "name": "Jett",
+            "hours": "1.566",
+            "matches": "2.723",
+            "winrate": "53.7%",
+            "kd": "1.30",
+            "adr": "152.9",
+            "acs": "253.7",
+            "dddelta": "+19",
+            "topmapname": "Icebox",
+            "topmapwinrate": "58% WR "
+        },
+        {
+            "name": "Reyna",
+            "hours": "553",
+            "matches": "988",
+            "winrate": "48.4%",
+            "kd": "1.19",
+            "adr": "157.4",
+            "acs": "245.8",
+            "dddelta": "+10",
+            "topmapname": "Breeze",
+            "topmapwinrate": "53% WR "
+        }
+    ],
+    "Playtime": "5.034",
+    "Matches": "8.815",
+    "Level": "947",
+    "Losses": "4186",
+    "TopAgent1": "Chamber",
+    "TopAgent2": "Jett",
+    "TopAgent3": "Reyna",
+    "TopHoursAgent1": "2.210",
+    "TopHoursAgent2": "1.566",
+    "TopHoursAgent3": "553",
+    "TopMatchesAgent1": "3.873",
+    "TopMatchesAgent2": "2.723",
+    "TopMatchesAgent3": "988",
+    "TopWinAgent1": "52.7%",
+    "TopWinAgent2": "53.7%",
+    "TopWinAgent3": "48.4%",
+    "TopKDAgent1": "1.27",
+    "TopKDAgent2": "1.30",
+    "TopKDAgent3": "1.19",
+    "TopWeapon1": "Vandal",
+    "TopWeaponHeadshot1": "40%",
+    "TopWeaponBodyshot1": "56%",
+    "TopWeaponLegshot1": "5%",
+    "TopWeaponKills1": "49.679",
+    "TopWeapon2": "Operator",
+    "TopWeaponHeadshot2": "8%",
+    "TopWeaponBodyshot2": "91%",
+    "TopWeaponLegshot2": "1%",
+    "TopWeaponKills2": "40.300",
+    "TopWeapon3": "Classic",
+    "TopWeaponHeadshot3": "37%",
+    "TopWeaponBodyshot3": "60%",
+    "TopWeaponLegshot3": "3%",
+    "TopWeaponKills3": "7.065",
+    "TopMap1": "Breeze",
+    "TopMapWinrate1": "54.1%",
+    "TopMapWins1": "466",
+    "TopMapLosses1": "392",
+    "TopMap2": "Split",
+    "TopMapWinrate2": "53.1%",
+    "TopMapWins2": "640",
+    "TopMapLosses2": "550",
+    "TopMap3": "Icebox",
+    "TopMapWinrate3": "53.0%",
+    "TopMapWins3": "541",
+    "TopMapLosses3": "469",
+    "TopMap4": "Lotus",
+    "TopMapWinrate4": "52.4%",
+    "TopMapWins4": "274",
+    "TopMapLosses4": "245",
+    "TopMap5": "Bind",
+    "TopMapWinrate5": "52.2%",
+    "TopMapWins5": "656",
+    "TopMapLosses5": "588",
+    "TopMap6": "Sunset",
+    "TopMapWinrate6": "51.5%",
+    "TopMapWins6": "141",
+    "TopMapLosses6": "132",
+    "TopMap7": "Fracture",
+    "TopMapWinrate7": "50.6%",
+    "TopMapWins7": "365",
+    "TopMapLosses7": "350",
+    "TopMap8": "Ascent",
+    "TopMapWinrate8": "49.4%",
+    "TopMapWins8": "668",
+    "TopMapLosses8": "666",
+    "TopMap9": "Haven",
+    "TopMapWinrate9": "49.2%",
+    "TopMapWins9": "598",
+    "TopMapLosses9": "602",
+    "TopMap10": "Pearl",
+    "TopMapWinrate10": "48.6%",
+    "TopMapWins10": "187",
+    "TopMapLosses10": "192",
+    "views": "119.735 views"
+}

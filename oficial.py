@@ -212,22 +212,41 @@ def scrapePlayer(user, tag):
     topmaps = topmaps.find_all('div', {'class':'top-maps__maps-map'})
     playerTopMaps = {}
     playerTopMapsList = []
-    for i, map in enumerate(topmaps):
-        mapname = map.find('div', {'class':'name'}).text
-        mapinfo = map.find('div', {'class':'info'})
-        mapwinrate = mapinfo.find('div', {'class':'value'}).text
-        mapwinlose = str(mapinfo.find('div', {'class':'label'}).text)
-        mapwin = mapwinlose.split('W - ')[0]
-        maplose = mapwinlose.split('W - ')[1].split('L')[0]
-        mapdict = {
-            'name': mapname,
-            'winrate': mapwinrate,
-            'wins': mapwin,
-            'loses': maplose
-        }
-        mapkey = f"topMap{i+1}"
-        playerTopMaps.update({mapkey: mapdict})
-        playerTopMapsList.append(mapdict)
+    for i in range(10):
+        if i < len(topmaps):
+            map = topmaps[i]
+            mapname = map.find('div', {'class':'name'}).text
+            mapinfo = map.find('div', {'class':'info'})
+            mapwinrate = mapinfo.find('div', {'class':'value'}).text
+            mapwinlose = str(mapinfo.find('div', {'class':'label'}).text)
+            mapwin = mapwinlose.split('W - ')[0]
+            maplose = mapwinlose.split('W - ')[1].split('L')[0]
+            mapdict = {
+                'name': mapname,
+                'winrate': mapwinrate,
+                'wins': mapwin,
+                'loses': maplose
+            }
+            mapkey = f"topMap{i+1}"
+            playerTopMaps.update({mapkey: mapdict})
+            playerTopMapsList.append(mapdict)
+        else:
+            map = ''
+            mapname = ''
+            mapinfo = ''
+            mapwinrate = '0'
+            mapwinlose = ''
+            mapwin = '0'
+            maplose = '0'
+            mapdict = {
+                'name': mapname,
+                'winrate': mapwinrate,
+                'wins': mapwin,
+                'loses': maplose
+            }
+            mapkey = f"topMap{i+1}"
+            playerTopMaps.update({mapkey: mapdict})
+            playerTopMapsList.append(mapdict)
         
     topagents = soup.find('div', {'class':'area-top-agents'})
     topagents = topagents.find('div', {'class':'st-content__category'})
@@ -278,6 +297,14 @@ def scrapePlayer(user, tag):
     highlightedstats = soup.find('div', {'class': 'trn-profile-highlighted-content__stats'})
     lvstat = highlightedstats.find_all('div', {'class':'stat'})[1]
     playerLevel = lvstat.find('span', {'class':'stat__value'}).text
+
+
+
+    rank = soup.find('div', {'class': 'trn-profile-highlighted-content__stats'})
+    lvstatlabel = rank.find_all('div', {'class':'stat'})[0]
+    playerRank = lvstatlabel.find('span', {'class':'stat__label'}).text
+
+
 
     lossstat = highlightedstats.find('div', {'class':'trn-profile-highlighted-content__ratio'})
     lossgs = lossstat.find_all('g')[1]
@@ -388,7 +415,8 @@ def scrapePlayer(user, tag):
         'TopMapWinrate10': playerTopMaps["topMap10"]["winrate"],
         'TopMapWins10': playerTopMaps["topMap10"]["wins"],
         'TopMapLosses10': playerTopMaps["topMap10"]["loses"],
-        'views': view
+        'views': view,
+        'Rank': playerRank
     }
         
 
@@ -432,7 +460,8 @@ def scrapePlayer(user, tag):
             "\nTop Map 10: " + playerData['TopMap10'] +
             "\nTop Map 10 Winrate: " + playerData['TopMapWinrate10'] +
             "\nTop Map 10 Wins: " + playerData['TopMapWins10'] +
-            "\nTop Map 10 Losses: " + playerData['TopMapLosses10']
+            "\nTop Map 10 Losses: " + playerData['TopMapLosses10'] +
+            "\nRanks: " + playerData['Rank']
           )
 
     inserir_dados(playerData)

@@ -17,7 +17,7 @@ url = 'https://tracker.gg/valorant/leaderboards/ranked/all/default?page=2&region
 
 scriptdir = os.path.dirname(__file__) 
 
-for i in range(1, 150):
+for i in range(300, 301):
     svc = webdriver.ChromeService(executable_path=binary_path)
     driver = webdriver.Chrome(service=svc)
     ua = UserAgent().random
