@@ -91,16 +91,16 @@
             "loses": "307"
         },
         "topMap5": {
-            "name": "Pearl",
-            "winrate": "51.2%",
-            "wins": "88",
-            "loses": "80"
-        },
-        "topMap6": {
             "name": "Bind",
             "winrate": "51.2%",
             "wins": "330",
             "loses": "312"
+        },
+        "topMap6": {
+            "name": "Pearl",
+            "winrate": "51.2%",
+            "wins": "88",
+            "loses": "80"
         },
         "topMap7": {
             "name": "Breeze",
@@ -153,16 +153,16 @@
             "loses": "307"
         },
         {
-            "name": "Pearl",
-            "winrate": "51.2%",
-            "wins": "88",
-            "loses": "80"
-        },
-        {
             "name": "Bind",
             "winrate": "51.2%",
             "wins": "330",
             "loses": "312"
+        },
+        {
+            "name": "Pearl",
+            "winrate": "51.2%",
+            "wins": "88",
+            "loses": "80"
         },
         {
             "name": "Breeze",
@@ -315,14 +315,14 @@
     "TopMapWinrate4": "51.7%",
     "TopMapWins4": "338",
     "TopMapLosses4": "307",
-    "TopMap5": "Pearl",
+    "TopMap5": "Bind",
     "TopMapWinrate5": "51.2%",
-    "TopMapWins5": "88",
-    "TopMapLosses5": "80",
-    "TopMap6": "Bind",
+    "TopMapWins5": "330",
+    "TopMapLosses5": "312",
+    "TopMap6": "Pearl",
     "TopMapWinrate6": "51.2%",
-    "TopMapWins6": "330",
-    "TopMapLosses6": "312",
+    "TopMapWins6": "88",
+    "TopMapLosses6": "80",
     "TopMap7": "Breeze",
     "TopMapWinrate7": "51.1%",
     "TopMapWins7": "250",
@@ -339,5 +339,6 @@
     "TopMapWinrate10": "50.2%",
     "TopMapWins10": "363",
     "TopMapLosses10": "353",
-    "views": "11.496 views"
+    "views": "11.656 views",
+    "Rank": "Radiant"
 }

@@ -118,7 +118,8 @@ def inserir_dados(data):
             'topMapWinrate10': numeroString(data['TopMapWinrate10']),
             'topMapWins10': numeroString(data['TopMapWins10']),
             'topMapLosses10': numeroString(data['TopMapLosses10']),
-            'views': numeroString(data['views'])
+            'views': numeroString(data['views']),
+            'rank': data['rank']
         }
 
         response = requests.post(url, json=jogador_request_data)
@@ -416,7 +417,7 @@ def scrapePlayer(user, tag):
         'TopMapWins10': playerTopMaps["topMap10"]["wins"],
         'TopMapLosses10': playerTopMaps["topMap10"]["loses"],
         'views': view,
-        'Rank': playerRank
+        'rank': playerRank
     }
         
 
@@ -461,7 +462,7 @@ def scrapePlayer(user, tag):
             "\nTop Map 10 Winrate: " + playerData['TopMapWinrate10'] +
             "\nTop Map 10 Wins: " + playerData['TopMapWins10'] +
             "\nTop Map 10 Losses: " + playerData['TopMapLosses10'] +
-            "\nRanks: " + playerData['Rank']
+            "\nrank: " + playerData['rank']
           )
 
     inserir_dados(playerData)

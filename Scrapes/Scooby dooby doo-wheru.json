@@ -6,18 +6,18 @@
     "KDR": "1.35",
     "Headshot%": "38.2%",
     "Win%": "59.0%",
-    "Wins": "2.161",
+    "Wins": "2.162",
     "KAST": "73.8%",
     "DDdeltaR": "37",
-    "Kills": "73.540",
-    "Deaths": "54.649",
-    "Assists": "14.175",
+    "Kills": "73.557",
+    "Deaths": "54.656",
+    "Assists": "14.177",
     "ACS": "260.8",
     "KADRatio": "1.61",
     "KillsPerRound": "0.9",
     "Clutch1v1s": "1.035",
-    "FlawlessRounds": "2.988",
-    "CurrentRating": "1,071RR",
+    "FlawlessRounds": "2.990",
+    "CurrentRating": "1,085RR",
     "PeakRating": "1.230RR",
     "TopWeaponsDict": {
         "topWeapon1": {
@@ -25,7 +25,7 @@
             "head%": "54%",
             "body%": "43%",
             "leg%": "2%",
-            "kills": "43.907"
+            "kills": "43.919"
         },
         "topWeapon2": {
             "name": "Ghost",
@@ -48,7 +48,7 @@
             "head%": "54%",
             "body%": "43%",
             "leg%": "2%",
-            "kills": "43.907"
+            "kills": "43.919"
         },
         {
             "name": "Ghost",
@@ -104,8 +104,8 @@
         },
         "topMap7": {
             "name": "Split",
-            "winrate": "57.2%",
-            "wins": "219",
+            "winrate": "57.3%",
+            "wins": "220",
             "loses": "164"
         },
         "topMap8": {
@@ -166,8 +166,8 @@
         },
         {
             "name": "Split",
-            "winrate": "57.2%",
-            "wins": "219",
+            "winrate": "57.3%",
+            "wins": "220",
             "loses": "164"
         },
         {
@@ -266,7 +266,7 @@
         }
     ],
     "Playtime": "1.999",
-    "Matches": "3.664",
+    "Matches": "3.665",
     "Level": "429",
     "Losses": "1484",
     "TopAgent1": "Jett",
@@ -288,7 +288,7 @@
     "TopWeaponHeadshot1": "54%",
     "TopWeaponBodyshot1": "43%",
     "TopWeaponLegshot1": "2%",
-    "TopWeaponKills1": "43.907",
+    "TopWeaponKills1": "43.919",
     "TopWeapon2": "Ghost",
     "TopWeaponHeadshot2": "54%",
     "TopWeaponBodyshot2": "45%",
@@ -324,8 +324,8 @@
     "TopMapWins6": "256",
     "TopMapLosses6": "184",
     "TopMap7": "Split",
-    "TopMapWinrate7": "57.2%",
-    "TopMapWins7": "219",
+    "TopMapWinrate7": "57.3%",
+    "TopMapWins7": "220",
     "TopMapLosses7": "164",
     "TopMap8": "Pearl",
     "TopMapWinrate8": "57.0%",
@@ -339,5 +339,6 @@
     "TopMapWinrate10": "55.6%",
     "TopMapWins10": "200",
     "TopMapLosses10": "159",
-    "views": "138.615 views"
+    "views": "138.784 views",
+    "rank": "Radiant"
 }
