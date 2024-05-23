@@ -23,7 +23,6 @@ def inserir_dados(data):
     try:
         url = 'http://localhost:8080/jogador/criar-jogador'
         
-        # Create a new dictionary with only the necessary fields for JogadorRequestDTO
         jogador_request_data = {
             'username': data['Username'],
             'tag': data['Tag'],
@@ -70,7 +69,6 @@ def inserir_dados(data):
             'topWeaponHeadshot2': data['TopWeaponHeadshot2'],
             'topWeapon3': data['TopWeapon3'],
             'topWeaponHeadshot3': data['TopWeaponHeadshot3'],
-
             'topMap1': data['TopMap1'],
             'topMapWinrate1': data['TopMapWinrate1'],
             'topMapWins1': data['TopMapWins1'],
@@ -83,19 +81,18 @@ def inserir_dados(data):
             'topMapWinrate3': data['TopMapWinrate3'],
             'topMapWins3': data['TopMapWins3'],
             'topMapLosses3': data['TopMapLosses3'],
-
             'topMap4': data['TopMap4'],
             'topMapWinrate4': data['TopMapWinrate4'],
             'topMapWins4': data['TopMapWins4'],
             'topMapLosses4': data['TopMapLosses4'],
-
             'topMap5': data['TopMap5'],
             'topMapWinrate5': data['TopMapWinrate5'],
             'topMapWins5': data['TopMapWins5'],
             'topMapLosses5': data['TopMapLosses5'],
+            'views': data['views']
         }
 
-        response = requests.post(url, json=jogador_request_data)  # Send the correct data
+        response = requests.post(url, json=jogador_request_data)
         
         if response.status_code == 200:
             print("Dados inseridos com sucesso:", response.json())
@@ -292,54 +289,50 @@ def scrapePlayer(user, tag):
         'Matches': playerMatches,
         'Level': playerLevel,
         'Losses': playerLosses,
-        'TopAgent1': playerTopAgents.get('topAgent1', {}).get('name', ''),
-        'TopAgent2': playerTopAgents.get('topAgent2', {}).get('name', ''),
-        'TopAgent3': playerTopAgents.get('topAgent3', {}).get('name', ''),
-        'TopHoursAgent1': playerTopAgents.get('topAgent1', {}).get('hours', ''),
-        'TopHoursAgent2': playerTopAgents.get('topAgent2', {}).get('hours', ''),
-        'TopHoursAgent3': playerTopAgents.get('topAgent3', {}).get('hours', ''),
-        'TopMatchesAgent1': playerTopAgents.get('topAgent1', {}).get('matches', ''),
-        'TopMatchesAgent2': playerTopAgents.get('topAgent2', {}).get('matches', ''),
-        'TopMatchesAgent3': playerTopAgents.get('topAgent3', {}).get('matches', ''),
-        'TopWinAgent1': playerTopAgents.get('topAgent1', {}).get('winrate', ''),
-        'TopWinAgent2': playerTopAgents.get('topAgent2', {}).get('winrate', ''),
-        'TopWinAgent3': playerTopAgents.get('topAgent3', {}).get('winrate', ''),
-        'TopKDAgent1': playerTopAgents.get('topAgent1', {}).get('kd', ''),
-        'TopKDAgent2': playerTopAgents.get('topAgent2', {}).get('kd', ''),
-        'TopKDAgent3': playerTopAgents.get('topAgent3', {}).get('kd', ''),
-        'TopWeapon1': playerTopWeapons.get('topWeapon1', {}).get('name', ''),
-        'TopWeaponHeadshot1': playerTopWeapons.get('topWeapon1', {}).get('head%', ''),
-        'TopWeapon2': playerTopWeapons.get('topWeapon2', {}).get('name', ''),
-        'TopWeaponHeadshot2': playerTopWeapons.get('topWeapon2', {}).get('head%', ''),
-        'TopWeapon3': playerTopWeapons.get('topWeapon3', {}).get('name', ''),
-        'TopWeaponHeadshot3': playerTopWeapons.get('topWeapon3', {}).get('head%', ''),
-
-        'TopMap1': playerTopMaps.get('topMap1', {}).get('name', ''),
-        'TopMapWinrate1': playerTopMaps.get('topMap1', {}).get('winrate', ''),
-        'TopMapWins1': playerTopMaps.get('topMap1', {}).get('wins', ''),
-        'TopMapLosses1': playerTopMaps.get('topMap1', {}).get('loses', ''),
-        'TopMap2': playerTopMaps.get('topMap2', {}).get('name', ''),
-        'TopMapWinrate2': playerTopMaps.get('topMap2', {}).get('winrate', ''),
-        'TopMapWins2': playerTopMaps.get('topMap2', {}).get('wins', ''),
-        'TopMapLosses2': playerTopMaps.get('topMap2', {}).get('loses', ''),
-        'TopMap3': playerTopMaps.get('topMap3', {}).get('name', ''),
-        'TopMapWinrate3': playerTopMaps.get('topMap3', {}).get('winrate', ''),
-        'TopMapWins3': playerTopMaps.get('topMap3', {}).get('wins', ''),
-        'TopMapLosses3': playerTopMaps.get('topMap3', {}).get('loses', ''),
-
-        'TopMap4': playerTopMaps.get('topMap4', {}).get('name', ''),
-        'TopMapWinrate4': playerTopMaps.get('topMap4', {}).get('winrate', ''),
-        'TopMapWins4': playerTopMaps.get('topMap4', {}).get('wins', ''),
-        'TopMapLosses4': playerTopMaps.get('topMap4', {}).get('loses', ''),
-
-        'TopMap5': playerTopMaps.get('topMap5', {}).get('name', ''),
-        'TopMapWinrate5': playerTopMaps.get('topMap5', {}).get('winrate', ''),
-        'TopMapWins5': playerTopMaps.get('topMap5', {}).get('wins', ''),
-        'TopMapLosses5': playerTopMaps.get('topMap5', {}).get('loses', ''),
-
-        'Views': view,
-
+        'TopAgent1': playerTopAgents['topAgent1']['name'],
+        'TopAgent2': playerTopAgents['topAgent2']['name'],
+        'TopAgent3': playerTopAgents['topAgent3']['name'],
+        'TopHoursAgent1': playerTopAgents['topAgent1']['hours'],
+        'TopHoursAgent2': playerTopAgents['topAgent2']['hours'],
+        'TopHoursAgent3': playerTopAgents['topAgent3']['hours'],
+        'TopMatchesAgent1': playerTopAgents['topAgent1']['matches'],
+        'TopMatchesAgent2': playerTopAgents['topAgent2']['matches'],
+        'TopMatchesAgent3': playerTopAgents['topAgent3']['matches'],
+        'TopWinAgent1': playerTopAgents['topAgent1']['winrate'],
+        'TopWinAgent2': playerTopAgents['topAgent2']['winrate'],
+        'TopWinAgent3': playerTopAgents['topAgent3']['winrate'],
+        'TopKDAgent1': playerTopAgents['topAgent1']['kd'],
+        'TopKDAgent2': playerTopAgents['topAgent2']['kd'],
+        'TopKDAgent3': playerTopAgents['topAgent3']['kd'],
+        'TopWeapon1': playerTopWeapons['topWeapon1']['name'],
+        'TopWeaponHeadshot1': playerTopWeapons['topWeapon1']['head%'],
+        'TopWeapon2': playerTopWeapons['topWeapon2']['name'],
+        'TopWeaponHeadshot2': playerTopWeapons['topWeapon2']['head%'],
+        'TopWeapon3': playerTopWeapons['topWeapon3']['name'],
+        'TopWeaponHeadshot3': playerTopWeapons['topWeapon3']['head%'],
+        'TopMap1': playerTopMaps["topMap1"]["name"],
+        'TopMapWinrate1': playerTopMaps["topMap1"]["winrate"],
+        'TopMapWins1': playerTopMaps["topMap1"]["wins"],
+        'TopMapLosses1': playerTopMaps["topMap1"]["loses"],
+        'TopMap2': playerTopMaps["topMap2"]["name"],
+        'TopMapWinrate2': playerTopMaps["topMap2"]["winrate"],
+        'TopMapWins2': playerTopMaps["topMap2"]["wins"],
+        'TopMapLosses2': playerTopMaps["topMap2"]["loses"],
+        'TopMap3': playerTopMaps["topMap3"]["name"],
+        'TopMapWinrate3': playerTopMaps["topMap3"]["winrate"],
+        'TopMapWins3': playerTopMaps["topMap3"]["wins"],
+        'TopMapLosses3': playerTopMaps["topMap3"]["loses"],
+        'TopMap4': playerTopMaps["topMap4"]["name"],
+        'TopMapWinrate4': playerTopMaps["topMap4"]["winrate"],
+        'TopMapWins4': playerTopMaps["topMap4"]["wins"],
+        'TopMapLosses4': playerTopMaps["topMap4"]["loses"],
+        'TopMap5': playerTopMaps["topMap5"]["name"],
+        'TopMapWinrate5': playerTopMaps["topMap5"]["winrate"],
+        'TopMapWins5': playerTopMaps["topMap5"]["wins"],
+        'TopMapLosses5': playerTopMaps["topMap5"]["loses"],
+        'views': view
     }
+        
 
     print("Username: " + user + " #" + tag + "\n" + "Damage Round: " + playerDpR + "\n" + "K/D Ratio: " + playerKDR + "\n" + "Headshot: " + playerHeadRate + "\n" + "Win: " + playerWinRate + "\n" + "Wins: " + playerWins + "\n" + "KAST: " + playerKAST + "\n" + "DDA/Round: " + playerDDdeltaR + "\n" + "Kills: " + playerKills + "\n" + "Deaths: " +  playerDeaths + "\n" + "Assits: " + playerAssists + "\n" + "ACS: " + playerACS + "\n" + "KADRatio: " + playerKADRatio + "\n" + "Kills/Round: " + playerKillsPerRound + "\n" + "Clutches 1v1: " + playerClutch1v1 + "\n" + "Flawless: " + playerFlawless + "\n" + "Current Rating: " + playerCurrentRating + "\n" + "Peak Rating: " + playerPeakRating + "\n" + "Top Weapons: " + str(playerTopWeapons) + "\n" + "Top Maps: " + str(playerTopMaps) + "\n" + "Top Agents: " + str(playerTopAgents) + "\n" + "Playtime: " + playerPlaytime + "\n" + "Matches: " + playerMatches + "\n" + "Level: " + playerLevel + "\n" + "Losses: " + playerLosses + "\n" + "URL: " + url + "\n" + "Views: " + view + 
           "\nTop Map 1: " + playerData['TopMap1'] +
