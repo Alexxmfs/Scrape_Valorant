@@ -286,10 +286,19 @@
     "TopKDAgent3": "1.15",
     "TopWeapon1": "Vandal",
     "TopWeaponHeadshot1": "51%",
+    "TopWeaponBodyshot1": "46%",
+    "TopWeaponLegshot1": "3%",
+    "TopWeaponKills1": "42.844",
     "TopWeapon2": "Operator",
     "TopWeaponHeadshot2": "6%",
+    "TopWeaponBodyshot2": "93%",
+    "TopWeaponLegshot2": "1%",
+    "TopWeaponKills2": "17.451",
     "TopWeapon3": "Phantom",
     "TopWeaponHeadshot3": "41%",
+    "TopWeaponBodyshot3": "55%",
+    "TopWeaponLegshot3": "4%",
+    "TopWeaponKills3": "13.544",
     "TopMap1": "Sunset",
     "TopMapWinrate1": "70.9%",
     "TopMapWins1": "124",
@@ -310,5 +319,5 @@
     "TopMapWinrate5": "53.0%",
     "TopMapWins5": "624",
     "TopMapLosses5": "535",
-    "views": "72.933 views"
+    "views": "72.942 views"
 }
